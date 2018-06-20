@@ -10,10 +10,12 @@ export OLD_ANDROID_HOME=/Users/$userName/Documents/android-sdk/24.3.2
 export NEW_ANDROID_HOME=/Users/$userName/Library/Android/sdk
 
 export ANDROID_HOME=$NEW_ANDROID_HOME
+export GRADLE_VERSION=4.1
+export GRADLE_HOME=/Applications/Android\ Studio.app/Contents/gradle/gradle-$GRADLE_VERSION
 
-export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools:ANDROID_HOME/tools:/Applications/Android\ Studio.app/Contents/gradle/gradle-4.1/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools:ANDROID_HOME/tools:$GRADLE_HOME/bin:$PATH
 
-# Aliases
+# General Aliases
 if $(gls &>/dev/null)
 then
   alias ls="gls -F --color"
@@ -23,10 +25,9 @@ then
 fi
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias quote="fortune -l | cowthink -W 60 | lolcatjs"
-alias cordova7="npm uninstall -g cordova && npm install -g cordova@7.0.0"
-alias cordova8="npm uninstall -g cordova && npm install -g cordova@8.0.0"
-alias clean-android="ionic platform rm android && ionic platform add android@7.1.0"
 alias clean="rm -rf node_modules && npm install"
+
+# Project aliases
 
 # Customization
 nvm use latest
