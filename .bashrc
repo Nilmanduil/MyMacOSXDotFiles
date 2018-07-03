@@ -26,8 +26,11 @@ fi
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias quote="fortune -l | cowthink -W 60 | lolcatjs"
 alias clean="rm -rf node_modules && npm install"
+alias ip="curl ipinfo.io/ip"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 
-# Project aliases
+# Project aliases (source project aliases files)
 
 # Customization
 nvm use latest
