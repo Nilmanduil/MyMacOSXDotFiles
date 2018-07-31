@@ -31,3 +31,11 @@ nvm use stable
 
 # Node global modules
 npm install -g ionic cordova lolcatjs bower ios-deploy ios-sim
+
+# SUPER folders
+mkdir ~/super
+mkdir ~/super/toTest
+mkdir ~/super/jars
+mkdir ~/super/dists
+mkdir ~/super/results
+mkdir ~/super/tested
