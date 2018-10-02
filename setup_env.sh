@@ -19,7 +19,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Brew formulae
-brew install fortune cowsay libsass coreutils cmatrix wget
+brew install fortune cowsay libsass coreutils cmatrix wget m-cli fd
 
 # NVM + Node
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
