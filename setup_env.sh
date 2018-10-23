@@ -30,7 +30,7 @@ nvm install stable
 nvm use stable
 
 # Node global modules
-npm install -g ionic cordova lolcatjs bower ios-deploy ios-sim taskbook
+npm install -g ionic cordova lolcatjs bower ios-deploy ios-sim taskbook shellcheck
 
 # SUPER folders
 mkdir ~/super
