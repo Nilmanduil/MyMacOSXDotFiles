@@ -19,7 +19,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Brew formulae
-brew install fortune cowsay libsass coreutils cmatrix wget m-cli fd
+brew install fortune cowsay libsass coreutils cmatrix wget m-cli fd shellcheck
 
 # NVM + Node
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
@@ -30,7 +30,7 @@ nvm install stable
 nvm use stable
 
 # Node global modules
-npm install -g ionic cordova lolcatjs bower ios-deploy ios-sim taskbook shellcheck
+npm install -g ionic cordova lolcatjs bower ios-deploy ios-sim taskbook
 
 # SUPER folders
 mkdir ~/super
