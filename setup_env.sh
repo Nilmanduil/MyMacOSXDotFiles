@@ -41,7 +41,7 @@ fi
 # Brew formulae
 brew update
 brew upgrade --all
-brew install android-sdk fortune cowsay libsass coreutils moreutils findutils cmatrix wget m-cli fd shellcheck osquery
+brew install android-sdk fortune cowsay libsass coreutils moreutils findutils cmatrix wget m-cli fd shellcheck osquery hexyl
 brew cleanup
 
 # NVM + Node
