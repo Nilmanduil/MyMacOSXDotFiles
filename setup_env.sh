@@ -7,7 +7,7 @@ sudo -v
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 # Show hidden files
-defaults write com.apple.Finder AppleShowAllFiles true
+defaults write com.apple.Finder AppleShowAllFiles YES
 # Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Set the Finder prefs for showing a few different volumes on the Desktop.
