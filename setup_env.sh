@@ -53,15 +53,7 @@ nvm install stable
 nvm use stable
 
 # Node global modules
-npm install -g ionic cordova lolcatjs bower ios-deploy ios-sim taskbook fx typed-install
-
-# SUPER folders
-mkdir ~/super
-mkdir ~/super/toTest
-mkdir ~/super/jars
-mkdir ~/super/dists
-mkdir ~/super/results
-mkdir ~/super/tested
+npm install -g ionic cordova lolcatjs bower ios-deploy ios-sim taskbook fx typed-install yarn pnpm react-native react expo-cli dotenv
 
 sudo softwareupdate -ir
 xcode-select --install
