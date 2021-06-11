@@ -1,0 +1,35 @@
+[user]
+	name = <NAME>
+	email = <EMAIL>
+	signingKey = <GPG KEY>
+[gpg]
+	program = /usr/local/bin/gpg
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
+[pull]
+	rebase = true
+[alias]
+	publish = "!git push -u origin $(git branch --show-current)"
+	unpublish = "!git push origin :$(git branch --show-current)"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	excludesFile = <HOME>/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = code --wait
+[help]
+	autocorrect = 1
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[diff]
+	wordRegex = .
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL_REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[url "git@github.com:"]
+    insteadOf = https://github.com/
