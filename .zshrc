@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew chucknorris cp emoji react-native)
+plugins=(chucknorris command-not-found emoji react-native git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,6 +112,7 @@ export OLD_ANDROID_HOME=/Users/$userName/Documents/android-sdk/24.3.2
 export NEW_ANDROID_HOME=/Users/$userName/Library/Android/sdk
 
 export ANDROID_HOME=$NEW_ANDROID_HOME
+export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_VERSION=29.0.2
 export GRADLE_VERSION=4.1
 export GRADLE_HOME=/Applications/Android\ Studio.app/Contents/gradle/gradle-$GRADLE_VERSION
@@ -122,6 +123,11 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/build-tools/$ANDROID_VERSION
+
+# Custom scripts
+export CUSTOM_SCRIPTS_ROOT=$HOME/custom_scripts
+export PATH=$PATH:$CUSTOM_SCRIPTS_ROOT
+[ ! -d $CUSTOM_SCRIPTS_ROOT ] && mkdir $CUSTOM_SCRIPTS_ROOT
 
 # General Aliases
 if $(gls &>/dev/null)
@@ -142,8 +148,13 @@ alias copyquote='echo "$LAST_QUOTE" | pbcopy | echo "=> Last quote copied to pas
 alias analyseAPK="super --bench --force --html --json -a --dex2jar ~/super/jars --dist ~/super/dists --downloads ~/super/toTest --results ~/super/results -t 4 -v && mv ~/super/toTest/* ~/super/tested/"
 
 # Project aliases (source project aliases files)
+alias run-emu="$ANDROID_HOME/tools/emulator @pixel2"
 
 # Customization
 export NVM_DEFAULT=15.11.0
 nvm use $NVM_DEFAULT
 quote
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
